@@ -4,6 +4,7 @@
     require_once 'controller/admin/ControllerAdmin.php';
     $controllerAdmin = new ControllerAdmin();
     $controller = new ControllerUser();
+    $message_flash = new Session_message_flash();
     $action = '';
 
     if (isset($_GET['action'])) {
@@ -30,14 +31,21 @@
                     break;
                 case "logout":
                     unset($_SESSION['user_connect']);
+                    $message_flash->set_flash("Vous êtes déconnecté.", "success");
+                    $message_flash->flash();
                     $controller->home();
                     break;
                 case "logAdmin":
                     $controllerAdmin->control_admin_connect();
                     break;
                 case "logoutAdmin":
-                    session_destroy();
+                    unset($_SESSION['admin_connect']);
+                    $message_flash->set_flash("Vous êtes déconnecté.", "success");
+                    $message_flash->flash();
                     $controller->home();
+                    break;
+                case "read_comments":
+                    $controllerAdmin->control_read_comments();
                     break;
                 case "create":
                     $controllerAdmin->control_create_chapter();
@@ -47,6 +55,12 @@
                     break;
                 case "delete":
                     $controllerAdmin->control_delete_chapter();
+                    break;
+                case "delete_comment":
+                    $controllerAdmin->control_delete_comment();
+                    break;
+                case "valid_comment":
+                    $controllerAdmin->control_valid_comment();
                     break;
                 case "displayChapter":
                     $controllerAdmin->control_display_chapter();

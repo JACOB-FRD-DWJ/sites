@@ -1,0 +1,108 @@
+@media only screen and (max-width: 1300px) {
+
+    header {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    header #titleSite{
+        font-size: 2em;
+    }
+
+    header #titleSite:hover{
+        text-decoration: none;
+    }
+
+
+    #divConnectRegistration{
+        font-size: 0.9em;
+        width: 40%;
+    }
+
+    h2{
+        font-size: 1.2em;
+        text-align: center;
+        margin-bottom: 2em;
+    }
+
+    #alert{
+        position: absolute;
+        z-index: 9999;
+    }
+
+    #divConnectRegistration a{
+        width: 30%;
+    }
+
+    #navAdmin{
+        font-size: 0.8em;
+        width: 70%;
+        padding: 0;
+    }
+
+    .separaterChapter{
+        border: 1.5px solid #20b7f9;
+        width: 50%;
+    }
+
+    #formChapter{
+        width: 70%;
+        margin: auto;
+        text-align: center;
+        font-size: 1em;
+    }
+
+    #formChapter h3{
+        font-size: 1em;
+        background-color: #191a60;
+    }
+
+    #redirectChapterList{
+        width: 25%;
+        margin-top: 2em;
+        padding: 0.5em;
+    }
+
+    form{
+        width: 95%;
+    }
+
+    #slider{
+        width: 85%;
+        margin: auto;
+    }
+
+    .carousel-item{
+        height: 100%;
+    }
+
+    .iconTitle{
+        width: 80%;
+    }
+
+    section{
+        top: 10%;
+        justify-content: center;
+    }
+
+    .divArticle{
+        width: 60%;
+    }
+
+    .divArticle p{
+        font-size: 0.9em;
+    }
+
+    .form0 , .form1{
+        width: 37%;
+        margin: 5% auto;
+    }
+
+    .error{
+        top: 30%;
+    }
+
+    .success{
+        top: 30%;
+    }
+
+}
